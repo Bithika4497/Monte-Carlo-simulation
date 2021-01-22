@@ -1,8 +1,7 @@
 #include<iostream.h>
 #include<math.h>
 #include<stdlib.h>
-//using namespace std;
-double gaussian_box_muller()
+double gaussian_box_muller()                //creating gaussian box muller function
 {
       double x=0.0;
       double y=0.0;
@@ -16,7 +15,7 @@ double gaussian_box_muller()
       while(euclid_sq>=1);
 	 return x*sqrt(-2*log(euclid_sq)/euclid_sq);
 }
-double monte_carlo_call_price(const int& num_sims, const double& s, const double& k, const double& r, const double& v, const double& t)
+double monte_carlo_call_price(const int& num_sims, const double& s, const double& k, const double& r, const double& v, const double& t)   //creating monte carlo call price function
 {
       double s_adjust=s*exp(t*(r-0.5*v*v));
       double s_cur=0.0;
